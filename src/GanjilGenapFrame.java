@@ -105,17 +105,16 @@ public class GanjilGenapFrame extends javax.swing.JFrame {
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel3Layout.createSequentialGroup()
                 .addGap(25, 25, 25)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(angkaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel3Layout.createSequentialGroup()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, jPanel3Layout.createSequentialGroup()
                         .addComponent(Cek)
                         .addGap(21, 21, 21)
                         .addComponent(ulang)
                         .addGap(18, 18, 18)
-                        .addComponent(keluar)))
+                        .addComponent(keluar))
+                    .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 360, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(angkaTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 155, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(86, Short.MAX_VALUE))
         );
         jPanel3Layout.setVerticalGroup(
@@ -171,7 +170,7 @@ public class GanjilGenapFrame extends javax.swing.JFrame {
         String input = angkaTextField.getText();
         int angka = Integer.parseInt(input);
 
-        // Cek apakah angka genap atau ganjil
+        // Cek apakah angka merupakan bilangan genap atau ganjil
         String hasil = (angka % 2 == 0) ? "Genap" : "Ganjil";
 
         // Cek apakah angka prima
@@ -201,7 +200,7 @@ private boolean isPrima(int angka) {
     public void keyTyped(KeyEvent e) {
         char karakter = e.getKeyChar();
         if (!Character.isDigit(karakter)) {
-            e.consume(); // Abaikan karakter non-digit
+            e.consume(); // Abaikan karakter bukan angka
         }
     }
 });
