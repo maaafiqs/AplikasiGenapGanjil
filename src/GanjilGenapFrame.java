@@ -175,13 +175,13 @@ public class GanjilGenapFrame extends javax.swing.JFrame {
 
         // Cek apakah angka prima
         if (isPrima(angka)) {
-            hasil += " dan bilangan Prima";
+            hasil += " dan angka ini merupakan bilangan Prima";
         } else {
-            hasil += " dan bukan bilangan Prima";
+            hasil += " dan angka ini bukan merupakan bilangan Prima";
         }
 
         // Tampilkan hasil pada JLabel atau JOptionPane
-        JOptionPane.showMessageDialog(this, "Angka " + angka + " adalah " + hasil);
+        JOptionPane.showMessageDialog(this, "Angka ini merupakan " + angka + " adalah " + hasil);
     } catch (NumberFormatException e) {
         JOptionPane.showMessageDialog(this, "Masukkan angka yang valid", "Error", JOptionPane.ERROR_MESSAGE);
     }
