@@ -200,7 +200,7 @@ private boolean isPrima(int angka) {
     public void keyTyped(KeyEvent e) {
         char karakter = e.getKeyChar();
         if (!Character.isDigit(karakter)) {
-            e.consume(); // Abaikan karakter bukan angka
+            e.consume(); // Hanya menerima input dalam bentuk angka
         }
     }
 });
