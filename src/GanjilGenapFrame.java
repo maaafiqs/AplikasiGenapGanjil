@@ -181,9 +181,9 @@ public class GanjilGenapFrame extends javax.swing.JFrame {
         }
 
         // Tampilkan hasil pada JLabel atau JOptionPane
-        JOptionPane.showMessageDialog(this, "Angka ini merupakan " + angka + " adalah " + hasil);
+        JOptionPane.showMessageDialog(this, "Angka ini " + angka + " adalah " + hasil);
     } catch (NumberFormatException e) {
-        JOptionPane.showMessageDialog(this, "Masukkan angka yang valid", "Error", JOptionPane.ERROR_MESSAGE);
+        JOptionPane.showMessageDialog(this, "Masukkan angka yang benar", "Error", JOptionPane.ERROR_MESSAGE);
     }
 }                                          
 
